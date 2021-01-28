@@ -1,6 +1,9 @@
 #include <cstdlib>
 #include "genesis.h"
-
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+using namespace std;
 // very basic wrapper for genesis. Most of the genesis stuff is moved into genmain.
 
 

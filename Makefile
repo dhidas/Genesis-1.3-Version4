@@ -3,7 +3,7 @@
 #
 # libraries
 #
-LIB= -lm -lstdc++ -lmpi_cxx -lfftw3
+LIB= -lm -lstdc++ -L$(FFTW_DIR)/lib -lfftw3
 #
 INCLUDE=-I./include
 #
@@ -70,7 +70,9 @@ clean:
 	rm -f $(EXECUTABLE)
 
 install:
-	cp ./$(EXECUTABLE) ~/bin/genesis4
+	mkdir -p bin
+	cp ./$(EXECUTABLE) bin/genesis4
 
 beta:
-	cp ./$(EXECUTABLE) ~/bin/$(EXECUTABLE).beta
+	mkdir -p bin
+	cp ./$(EXECUTABLE) bin/$(EXECUTABLE).beta
